@@ -1,0 +1,46 @@
+.container {
+    margin-top: 40px;
+}
+
+.header {
+    background-color: grey;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.game-zone {
+    border: none;
+    background-color: #cdd1cb;
+    border-radius: 5px;
+    height: 35em;
+    margin: 10px;
+}
+
+.main {
+    margin: 10px 30px;
+}
+
+.gamezone {
+    padding: 5px;
+}
+.gameButton {
+    width: 8em;
+    height: 8em;
+    margin: 5px;
+    background-color: #e3e3e3;
+}
+.refresh {
+    width: 5em;
+    color: white;
+    height: 2em;
+    border-radius: 5px;
+    background-color: grey;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    -webkit-box-shadow: -1px 3px 15px 1px #000000;
+    box-shadow: -1px 3px 15px 1px #000000;
+    letter-spacing: 1px;
+}
+.table-refresh {
+    text-align: center;
+}

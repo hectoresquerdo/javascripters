@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.1/socket.io.slim.js"></script>
+
+    <!-- Socket IO -->
+    <script src="https://cdn.socket.io/4.0.1/socket.io.min.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" >
+
+    <link rel="stylesheet" type="text/css" href="/css/game.css" />
+    <title>Javascripters</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Javascripters Game</a>
+        <button type="button" onclick="{logout()}" class="btn btn-light">Logout</button>
+    </nav>
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="container-fluid text-center header">
+                    <h2>Welcome to our game! Enjoy!</h2>
+                </div>
+              
+            </div>
+            <div class="row winnerDiv" id="winnerDiv">
+                <div class="alert alert-success winnerDiv"   role="alert">
+                    <span id="winner"></span>
+                  </div>
+            </div>
+       
+           
+            <div class="row">
+                <div class="col-7 game-zone">
+                    <div class="row">
+                        <div class="container-fluid text-center header">
+                            <h2>Game Zone</h2>
+                                         </div>
+                    </div>
+                   <div
+                        class="alert alert-danger mt-3"
+                        role="alert"
+                        id="playerNmbr"
+                    >
+                      
+                    </div>
+                    <div class="gamePitch">
+                        <h1 id="waitingRoom" class="waitingRoom">Waiting to choose a room...</h1>  
+                        <div class="row tresContainer" id="tresContainer">                        
+                          <button class="gameButton"><canvas  width="100" height="100"></canvas></button>
+                          <button class="gameButton"><canvas  width="100" height="100"></canvas></button>
+                          <button class="gameButton"><canvas  width="100" height="100"></canvas></button>
+                          <button class="gameButton"><canvas  width="100" height="100"></canvas></button>
+                          <button class="gameButton"><canvas  width="100" height="100"></canvas></button>
+                          <button class="gameButton"><canvas  width="100" height="100"></canvas></button>
+                          <button class="gameButton"><canvas  width="100" height="100"></canvas></button>
+                          <button class="gameButton"><canvas  width="100" height="100"></canvas></button>
+                          <button class="gameButton"><canvas  width="100" height="100"></canvas></button>
+                    </div>
+                  
+        
+                    </div>
+                </div>
+                <div class="col-4 main">
+                    <div class="row">
+                        <div class="container userInfo" id="userInfo">
+                            <div class="col-3 userPlay">
+                                <span class="localStorageInfo">Welcome: <h2 id="username" value=""></h2></span>
+                                <span class="localStorageInfo">Room: <h3 id="gameRoom" value=""></h3></span>
+                                <button  id="playBtn" class="btn btn-secondary playBtn" disabled onclick="activateGame()">Play</button>
+                            </div>
+                            <div class="col-8 avatar">
+                                <div id="home" class="drop" ondrop="drop(event)"
+                                    ondragover="allowDrop(event)">
+                                    <img src="" id="avatarImage" class="draggable" draggable="true" ondragstart="drag(event)">
+                                </div>
+                                <span>Please drag to the Game room</span>
+                            </div>
+                            
+                        
+                        </div>
+                    </div>
+                   
+                    <div class="row invalid" id="invalid"><div
+                        class="alert alert-danger mt-3"
+                        role="alert"
+                        id="invalid"
+                    >
+                       Sorry this Room are full, please try another one!
+                    </div></div>
+                    <div class="row rooms">
+                        <div class="col bg-dark text-light room" >
+                                                 
+                            <h3>Water room: </h2>
+                            <div id="water" class="bg-primary text-white drop droppable gamezone" ondrop="drop(event)"
+                                ondragover="allowDrop(event)">
+                            </div>
+                        </div>
+                        <div class="col bg-dark text-light room">
+                            <h3>Fire room: </h2>
+                            </h3>
+                            <div id="fire" class="bg-danger text-white drop droppable gamezone" ondrop="drop(event)"
+                                ondragover="allowDrop(event)">
+                            </div>
+                        </div>
+                        <div class="col bg-dark text-light room">
+                            <h3>Wind room: </h2>
+                            </h3>
+                            <div id="wind" class="bg-light text-white drop gamezone" ondrop="drop(event)"
+                                ondragover="allowDrop(event)">
+                            </div>
+                        </div>
+                        <div class="col bg-dark text-light room">
+                            <h3>Earth room: </h2>
+                            </h3>
+                            <div id="earth" class="bg-success text-white drop gamezone" ondrop="drop(event)"
+                                ondragover="allowDrop(event)">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="container">
+           
+     
+        </div>
+    </main>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+ 
+     <script src="/js/game.js"></script>
+
+</body>
+
+</html>

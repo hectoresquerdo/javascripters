@@ -1,0 +1,41 @@
+.bg {
+    background-color: #5f6661;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+.welcome {
+    color: white;
+    border: none;
+    margin-bottom: 10px;
+    background-color: grey;
+    width: 25em;
+    margin-left: 4em;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px black;
+    padding: 5px 0px;
+}
+.form {
+    padding: 0;
+}
+.form-container {
+    background-color: grey;
+    width: 25em;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px black;
+    position: relative;
+    right: 125%;
+}
+#other {
+    background-color: white;
+    border: none;
+    outline: none;
+    color: black;
+    font-weight: bold;
+}

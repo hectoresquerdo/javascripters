@@ -1,0 +1,116 @@
+.container {
+    margin-top: 40px;
+}
+
+.drop {
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 9em;
+    height: 5.5em;
+    margin: 5px;
+}
+.header {
+    background-color: grey;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.game-zone {
+    border: none;
+    background-color: #cdd1cb;
+    border-radius: 5px;
+    height: 35em;
+    margin: 10px;
+}
+.gamePitch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.waitingRoom {
+    margin-top: 3em;
+}
+.main {
+    margin: 10px 30px;
+}
+
+.userInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #cdd1cb;
+    border-radius: 5px;
+    margin: 0px 0px;
+    width: 40em;
+    height: 11em;
+}
+.userPlay {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+}
+.localStorageInfo {
+    width: 6em;
+}
+.playBtn {
+    width: 6em;
+    padding: 3px;
+    margin: 3px;
+    outline: none;
+}
+.avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    height: 9em;
+    margin: 5px 25px;
+    font-size: 14px;
+    background-color: grey;
+    cursor: move;
+}
+.rooms {
+    margin-top: 10px;
+    width: 25.5em;
+    padding-left: 15px;
+}
+.invalid {
+    width: 25em;
+}
+.room {
+    border-radius: 10px;
+    margin: 1px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.gamezone {
+    padding: 5px;
+}
+.gameButton {
+    width: 8em;
+    height: 8em;
+    margin: 5px;
+    background-color: #e3e3e3;
+}
+.tresContainer {
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr 0.5fr;
+    width: 30em;
+    margin: auto;
+}
+.winnerDiv {
+    width: 37em;
+    margin: auto;
+
+    font-size: 28px;
+    text-align: center;
+}
